@@ -1,0 +1,76 @@
+/* Score Gauge Component */
+
+.score-gauge {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-6);
+}
+
+.gauge-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.gauge-svg {
+    width: 100%;
+    height: auto;
+}
+
+.gauge-indicator {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: all 0.5s ease-out;
+}
+
+.gauge-score {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.score-value {
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+.score-status {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.score-status.excellent {
+    color: #14b8a6;
+}
+
+.score-status.good {
+    color: #f59e0b;
+}
+
+.score-status.poor {
+    color: #ef4444;
+}
+
+.gauge-labels {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.label-min,
+.label-max {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+}

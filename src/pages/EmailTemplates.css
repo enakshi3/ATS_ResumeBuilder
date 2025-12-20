@@ -1,0 +1,104 @@
+/* Email Templates */
+.email-templates-page .page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--space-6);
+}
+
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-5);
+}
+
+.template-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
+    transition: all var(--transition-fast);
+}
+
+.template-card:hover {
+    border-color: var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.template-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+}
+
+.template-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(139, 92, 246, 0.15);
+    border-radius: var(--radius-lg);
+    color: var(--primary);
+}
+
+.template-category {
+    padding: 4px 10px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-full);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+}
+
+.template-card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.template-subject {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.template-preview {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: var(--space-4);
+}
+
+.template-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.template-actions .action-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.template-actions .action-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.template-actions .action-btn.delete:hover {
+    color: var(--error);
+    border-color: var(--error);
+}

@@ -1,0 +1,98 @@
+/* Scan History */
+.scan-history-page .page-header {
+    margin-bottom: var(--space-6);
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    padding: var(--space-5);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-fast);
+}
+
+.history-item:hover {
+    border-color: var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.history-info {
+    flex: 1;
+}
+
+.history-info h4 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.history-info p {
+    font-size: 13px;
+    color: var(--text-tertiary);
+}
+
+.history-score {
+    font-size: 18px;
+    font-weight: 700;
+    min-width: 60px;
+    text-align: center;
+}
+
+.score-excellent {
+    color: var(--success);
+}
+
+.score-good {
+    color: var(--warning);
+}
+
+.score-needs-work {
+    color: var(--error);
+}
+
+.history-date {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 13px;
+    color: var(--text-tertiary);
+    min-width: 120px;
+}
+
+.history-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.action-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.action-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.action-btn.delete:hover {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--error);
+    border-color: var(--error);
+}

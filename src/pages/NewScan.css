@@ -1,0 +1,331 @@
+/* New Scan Page - Two Card Layout */
+
+.new-scan-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.new-scan-page .page-header {
+    margin-bottom: var(--space-6);
+}
+
+/* Two Card Grid */
+.scan-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+/* Scan Card */
+.scan-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.card-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.mode-badge {
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    font-size: 11px;
+    color: var(--text-tertiary);
+    font-weight: 500;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 12px;
+    color: var(--text-tertiary);
+    cursor: pointer;
+}
+
+.toggle-label input {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-light);
+    border-radius: 4px;
+    position: relative;
+    transition: all var(--transition-fast);
+}
+
+.toggle-label input:checked+.checkbox-custom {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.toggle-label input:checked+.checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Card Content */
+.card-content {
+    padding: var(--space-5);
+}
+
+/* Upload Dropzone */
+.upload-dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-10) var(--space-6);
+    border: 2px dashed var(--border-light);
+    border-radius: var(--radius-xl);
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    min-height: 280px;
+}
+
+.upload-dropzone:hover {
+    border-color: var(--primary);
+    background: rgba(74, 144, 217, 0.03);
+}
+
+.upload-dropzone.dragging {
+    border-color: var(--primary);
+    background: rgba(74, 144, 217, 0.08);
+    border-style: solid;
+}
+
+.upload-icon-circle {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(74, 144, 217, 0.15);
+    border-radius: 50%;
+    color: var(--primary);
+    margin-bottom: var(--space-4);
+}
+
+.upload-primary {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.upload-secondary {
+    font-size: 14px;
+    color: var(--primary);
+    margin-bottom: var(--space-3);
+}
+
+.upload-helper {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* File Uploaded State */
+.file-uploaded {
+    padding: var(--space-6);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: var(--radius-xl);
+    background: rgba(34, 197, 94, 0.05);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.file-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(74, 144, 217, 0.15);
+    border-radius: var(--radius-lg);
+    color: var(--primary);
+}
+
+.file-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.file-size {
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+.remove-file-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(239, 68, 68, 0.1);
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--error);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.remove-file-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.file-status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding-top: var(--space-3);
+    border-top: 1px solid rgba(34, 197, 94, 0.2);
+    font-size: 13px;
+    color: var(--success);
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: var(--space-5);
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2);
+}
+
+.form-label .required {
+    color: var(--error);
+}
+
+.form-input {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    background: var(--bg-glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all var(--transition-fast);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.15);
+}
+
+.form-input::placeholder {
+    color: var(--text-muted);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 160px;
+    line-height: 1.6;
+}
+
+/* Analyze Section */
+.analyze-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.analyze-btn {
+    min-width: 200px;
+}
+
+.analyze-hint {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* Spinner */
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .scan-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+
+    .header-left {
+        flex-wrap: wrap;
+    }
+}
