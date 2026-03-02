@@ -50,6 +50,12 @@ PDF Generation: Dynamic resume export
 🎯 Engineering Highlights
 
 AI + human approval workflow
+<img width="1067" height="729" alt="Screenshot 2026-01-21 001923" src="https://github.com/user-attachments/assets/8c5dcb27-f65e-4b4f-8192-1c59da4963c2" />
+
+<img width="1919" height="728" alt="Screenshot 2026-01-08 142604" src="https://github.com/user-attachments/assets/5501b0a9-96c0-4c25-98c8-382585a9e40e" />
+
+<img width="1912" height="899" alt="Screenshot 2026-02-25 005902" src="https://github.com/user-attachments/assets/c4a30116-96e6-4263-b3d7-cd2bb29308e4" />
+
 
 Role-based access & usage quotas
 
